@@ -1,0 +1,7 @@
+{
+  "name": "Outline Master",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
