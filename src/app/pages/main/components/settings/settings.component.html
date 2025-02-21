@@ -1,0 +1,61 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-back-button slot="start" text="" default-href="/main"></ion-back-button>
+    <ion-title>{{ 'PAGE.SETTINGS' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" fullscreen>
+
+  <ng-container *ngIf="settings">
+    <ion-item class="ion-margin-bottom">
+      <ion-select mode="ios" label="{{'TITLES.LANGUAGE' | translate}}" [value]="settings.lang"
+                  (ionChange)="changeLang($event)">
+        <ion-select-option *ngFor="let lang of Object.values(Langs)" [value]="lang">{{ 'LANG.' + lang | translate }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-select mode="ios" label="{{'TITLES.FONT' | translate}}" [value]="settings.fontSize || FontSize.standard"
+                  (ionChange)="changeFontSize($event)">
+        <ion-select-option *ngFor="let font of Object.values(FontSize)" [value]="font">{{ font | translate }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label >Theme</ion-label>
+      <ion-segment [value]="settings.theme" (ionChange)="switchThemeMode($event)">
+        <ion-segment-button [value]="Theme.light">
+          <ion-icon name="sunny-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button [value]="Theme.dark">
+          <ion-icon name="moon-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button [value]="Theme.cont">
+          <ion-icon name="contrast-outline"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-item>
+
+    <div class="title"><div class="title_text">{{('TITLES.' + 'PROFILE') | translate}}</div></div>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label  slot="start">Surname</ion-label>
+      <ion-input mode="md" fill="solid" readonly [value]="user.surname"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label slot="start">Name</ion-label>
+      <ion-input mode="md"  fill="solid"  readonly [value]="user.name"></ion-input>
+    </ion-item>
+  </ng-container>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar mode="ios" class="ion-padding" style="display: flex;">
+    <ion-button style="display: block" (click)="submit()">{{'BUTTON.SAVE' | translate}}</ion-button>
+    <ion-button style="display: block" (click)="logout()">{{'BUTTON.LOGOUT' | translate}}</ion-button>
+  </ion-toolbar>
+</ion-footer>

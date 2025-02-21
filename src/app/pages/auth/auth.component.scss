@@ -1,0 +1,12 @@
+form {
+  ion-label {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+ion-item {
+  --inner-padding-start: 15px;
+  --padding-start: 0;
+}

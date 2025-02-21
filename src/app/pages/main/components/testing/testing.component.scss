@@ -1,0 +1,10 @@
+.title {
+  margin-top: 20px;
+  &_text {
+    font-size: var(--font-size-title);
+  }
+}
+
+ion-content {
+  --overflow: hidden;
+}

@@ -1,0 +1,49 @@
+@import "../../../../../theme/variables.scss";
+
+ion-select {
+  color: var(--dark-color);
+}
+
+ion-item {
+  --background: transparent;
+  border-bottom: 1px solid  var(--ion-color-primary);
+  --inner-border-width: 0;
+}
+
+ion-input {
+  margin: 0;
+  --background: transparent!important;
+  background: transparent!important;
+  --border-width: 0px;
+  --border-radius: 0px!important;
+  box-shadow: none;
+  text-align: center;
+}
+
+.title {
+  margin: 10vh 10px 10px;
+  &_text {
+    font-size: var(--font-size-title);
+    font-weight: 600;
+  }
+}
+
+ion-button {
+  margin: 10px auto;
+}
+
+ion-segment {
+  --indicator-width: auto;
+  border-radius: 20px;
+  height: 30px;
+  width: 190px;
+  --background: var(--segment-background);
+  ion-segment-button {
+    height: 30px;
+    --indicator-color: var(--ion-color-primary);
+  }
+    ion-icon {
+      height: 25px;
+      color: var(--segment-color);
+    }
+}

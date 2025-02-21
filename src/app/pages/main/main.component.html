@@ -1,0 +1,15 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-title>{{'PAGE.MAIN' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="btn-wrapper">
+    <ion-button (click)="navigateTo('/main/testing')">{{'PAGE.TEST' | translate}}</ion-button>
+    <ion-button (click)="navigateTo('/main/training')">{{'PAGE.TRAINING'| translate}}</ion-button>
+    <ion-button (click)="navigateTo('/main/result')">{{'PAGE.RESULT' | translate}}</ion-button>
+    <ion-button (click)="navigateTo('/main/success')">{{'PAGE.SUCCESS' | translate}}</ion-button>
+    <ion-button (click)="navigateTo('/main/settings')">{{'PAGE.SETTINGS' | translate}}</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-title>{{'PAGE.AUTH' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" fullscreen>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    @for (control of Object.entries(form.controls).reverse(); track control[0]) {
+      <ion-input [formControlName]="control[0]" class="input" mode="md"
+                 label="{{('FORM.' + control[0].toUpperCase()) | translate}}" label-placement="floating" fill="outline"></ion-input>
+      <span *ngIf="!form.get(control[0])?.untouched && !form.get(control[0])?.valid">{{error(control[1]) | translate}}</span>
+    }
+    <ion-button type="submit" mode="ios"
+                [disabled]="form.invalid">{{ (mode === AuthMode.register ? 'BUTTON.REGISTER' : 'BUTTON.AUTH') | translate}}
+    </ion-button>
+    <ion-label (click)="changeAuthMode()">{{ (mode === AuthMode.register ? 'BUTTON.AUTH' : 'BUTTON.REGISTER') | translate}}</ion-label>
+  </form>
+</ion-content>
+
+<ion-modal #usersModal>
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>{{'Користувачі' | translate}}</ion-title>
+        <ion-icon slot="end" name="close-outline" (click)="userModal.dismiss()"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-list style="height: 100%">
+      <ion-item *ngFor="let user of Object.values(users)" button>
+        <ion-label style="text-align: center" (click)="auth(user);usersModal.dismiss()">{{ user.surname }} {{ user.name }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-template>
+</ion-modal>

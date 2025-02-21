@@ -1,0 +1,61 @@
+{
+  "PAGE": {
+    "AUTH": "Authorization",
+    "MAIN": "Main",
+    "TEST": "Testing",
+    "RESULT": "Results",
+    "SUCCESS": "Success",
+    "SETTINGS": "Settings",
+    "TRAINING" : "Training"
+  },
+  "BUTTON": {
+    "AUTH": "Login",
+    "REGISTER": "Register",
+    "BACK": "Back",
+    "START": "Start",
+    "TO_RESULT": "To Results",
+    "RETRY": "Retry",
+    "SAVE": "Save",
+    "LOGOUT": "Logout"
+  },
+  "TITLES": {
+    "TIMER": "Timer",
+    "STAGE": "Stage",
+    "TESTING_RESULTS": "Testing Results",
+    "TESTING_FINISH": "Testing Finished",
+    "EMPTY_RESULTS": "No Results",
+    "INSTRUCTION": "Instruction",
+    "TRAINING_FINISH": "Training Finished",
+    "RESULT": "Result",
+    "LANGUAGE": "Language",
+    "FONT": "Font",
+    "PROFILE": "Профіль"
+  },
+  "INFO": {
+    "START_TEST": "Repeat the contours of the shapes that will be displayed on the screen. It is important to focus on the accuracy and speed of movements. Each figure has 5 seconds. Don't worry about a bad result, you can try again!",
+    "START_TRAINING": "Repeat the contours and elements of the shapes that will flash on the screen. It is important to focus on accuracy and coordination of movements, not on speed. Try to reproduce the contour exactly - don't worry if everything doesn't work out the first time. You can try again!",
+    "FINISH": "We are waiting for you tomorrow! You've made a big step towards improvement! Keep working, and every day you will become stronger!"
+  },
+  "FORM": {
+    "NAME": "Name",
+    "SURNAME": "Surname"
+  },
+  "SHAPES": {
+    "TRIANGLE": "Triangle",
+    "SQUARE": "Square",
+    "EIGHT": "Eight",
+    "CIRCLE": "Circle",
+    "RECTANGLE": "Rectangle",
+    "HOURGLASS": "Hourglass"
+  },
+  "LANG": {
+    "en": "English",
+    "uk": "Українська"
+  },
+  "ERROR": {
+    "MIN_LENGTH": "Not enough characters",
+    "REQUIRED": "Field is required"
+  },
+  "standard": "Standard",
+  "large": "Large"
+}

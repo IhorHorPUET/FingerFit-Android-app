@@ -1,0 +1,19 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-back-button slot="start" text="" default-href="/main"></ion-back-button>
+    <ion-title>{{'PAGE.SUCCESS' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngIf="Object.keys(trainingResults)?.length else empty">
+    <div class="chart-wrapper" *ngFor="let chart of chartsData | keyvalue">
+      <div class="title"><div class="title_text">{{('SHAPES.' + chart.key.toUpperCase()) | translate}}</div></div>
+      <canvas id="{{chart.key}}"></canvas>
+    </div>
+  </ng-container>
+
+  <ng-template #empty>
+    <ion-title>{{'TITLES.EMPTY_RESULTS' | translate}}</ion-title>
+  </ng-template>
+</ion-content>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FingerFit</string>
+    <string name="title_activity_main">FingerFit</string>
+    <string name="package_name">com.fingerFit.app</string>
+    <string name="custom_url_scheme">com.fingerFit.app</string>
+</resources>

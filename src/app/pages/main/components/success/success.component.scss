@@ -1,0 +1,11 @@
+.chart-wrapper {
+  margin: 14px 0;
+  ion-label {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  canvas {
+    height: 300px;
+  }
+}

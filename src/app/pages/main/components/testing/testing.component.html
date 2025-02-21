@@ -1,0 +1,25 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-back-button slot="start" text=""></ion-back-button>
+    <ion-title>{{'PAGE.TEST' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="position: absolute;width: 100%">
+    <div class="title"><div class="title_text">{{'TITLES.TIMER' | translate}}</div></div>
+    <ion-label class="testing-title" style="font-size: 40px">{{timer}}</ion-label>
+  </div>
+
+  <app-canvas (drawingComplete)="handleDrawingResult($event)"
+              [stage]="1"
+              [timer]="timer"
+              [coeff] = shapes[activeShapeIndex].coeffPermissibleErrors
+              [drawShape]="activeShape">
+  </app-canvas>
+
+  <ion-item  lines="full" class="result-item">
+    <ion-label *ngIf="currResult != null">{{'TITLES.RESULT'|translate}}: <span style="font-size: 40px">{{ currResult + '%'}}</span></ion-label>
+    <ion-icon *ngIf="currResult != null && !this.shapes[3].results.length" (click)="nextShape()" slot="end" name="arrow-forward-circle-outline"></ion-icon>
+  </ion-item>
+</ion-content>

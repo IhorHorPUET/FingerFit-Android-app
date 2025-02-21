@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Outline Master',
+  appId: 'com.fingerFit.app',
+  appName: 'FingerFit',
   webDir: 'www'
 };
 

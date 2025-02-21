@@ -35,3 +35,210 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size);
+  color: var(--dark-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  max-width: 500px;
+  margin: 25vh auto 0;
+  width: 100%;
+
+  span {
+    text-align: center;
+    transform: translateY(-27px);
+    font-size: 16px;
+  }
+}
+
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+.input{
+  margin-bottom: 35px;
+  background: var(--input-background) !important;
+  --highlight-color-focused: var(--dark-color)!important;
+  --highlight-color-invalid: var(--dark-color)!important;
+  --highlight-color-valid: var(--dark-color)!important;
+  --border-width: 0px!important;
+  --highlight-height: 0px!important;
+  --color: var(--dark-color)!important;
+  border-radius: 10px;
+  & > label > .label-text-wrapper {
+    position: absolute!important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+
+ion-input.ion-touched.has-value .label-text-wrapper {
+  transform: translateY(-55px) scale(0.9) !important;
+}
+
+ion-input.has-focus .label-text-wrapper {
+  transform: translateY(-55px) scale(0.9) !important;
+}
+
+ion-button {
+  width: 200px;
+  --border-radius: 20px;
+  margin: 0 auto;
+  font-size: var(--font-size)!important;
+  font-weight: 600;
+  --padding-bottom: 8px;
+  --padding-top: 8px;
+  min-height: 2.5em;
+  color: white;
+  --background-activated: var(--button-actived);
+}
+
+ion-toolbar {
+  --min-height: 60px;
+  --background: rgb(234, 234, 230);
+  --border-color: #bebebe;
+  --border-width: 0 0 1px!important;
+  ion-title {
+    font-size: var(--font-size-title);
+  }
+}
+
+ion-modal {
+  --max-height: 50%;
+  --height: 35%;
+  --width: 80%;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  ion-toolbar {
+    --background: white;
+  }
+}
+
+ion-modal::part(backdrop) {
+  background: rgba(209, 213, 219);
+  opacity: 1;
+}
+
+ion-modal ion-toolbar {
+  --color: white;
+}
+
+ion-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.footer {
+  position: relative;
+  height: 15%;
+  width: 100%;
+  background-color: transparent;
+}
+
+.alert-wrapper {
+  background: transparent!important;
+}
+.alert, .alert-wrapper {
+  --max-width: 90vw;
+  .alert-head{
+    background-color: var(--alert-background);
+  }
+  .alert-title {
+    font-size: var(--font-size-button);
+    color: var(--dark-color);
+  }
+  .alert-message {
+    font-size: var(--font-size);
+    color: var(--dark-color);
+    background-color: var(--alert-background);
+    padding: 0 5px 0 5px!important;
+  }
+  .alert-button, button {
+    background-color: var(--alert-background) !important;
+    border: none!important;
+  }
+}
+
+.result-item {
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  ion-icon {
+    height: 60px;
+    width: 60px;
+  }
+  ion-label {
+    font-size: var(--font-size-title);
+  }
+}
+.result-item::part(native) {
+  height: 100%;
+  background-color: transparent;
+}
+
+.testing-title {
+  font-size: var(--font-size-large);
+  position: absolute;
+  width: 100%;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-back-button {
+  --padding-start: 10px;
+}
+
+.title {
+  text-align: center;
+  margin: 10px 5%;
+  position: relative;
+  &_text {
+    width: max-content;
+    margin: 0 auto;
+    background: var(--ion-background-color);
+    padding: 0 15px;
+    position: relative;
+    z-index: 10;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 45%;
+    height: 1.5px;
+    width: 50%;
+    background: var(--dark-color);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    height: 1.5px;
+    width: 50%;
+    background: var(--dark-color);
+  }
+}
+
+ion-title {
+  text-align: center;
+}
+
+ion-toolbar {
+  --background: var(--ion-background-color);
+}
+
+.alert-radio-label.sc-ion-alert-ios{
+  color: var(--dark-color) !important
+}
