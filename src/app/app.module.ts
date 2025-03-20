@@ -22,7 +22,9 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
   declarations: [AppComponent,AuthComponent],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      swipeBackEnabled: false
+    }),
     AppRoutingModule,
     ReactiveFormsModule,
     IonicStorageModule.forRoot({
